@@ -1,0 +1,68 @@
+{
+  "pins" : [
+    {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:kishikawakatsumi/KeychainAccess.git",
+      "state" : {
+        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+        "version" : "4.2.2"
+      }
+    },
+    {
+      "identity" : "libtesseract",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyTesseract/libtesseract.git",
+      "state" : {
+        "revision" : "214a36e04d740795d7ba2f07c6108944d0136f8a",
+        "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "nfcpassportreader",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AndyQ/NFCPassportReader.git",
+      "state" : {
+        "revision" : "c1d8dab53bc7af2d579e846d9e48acc1883661a2",
+        "version" : "2.1.0"
+      }
+    },
+    {
+      "identity" : "openssl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/OpenSSL.git",
+      "state" : {
+        "revision" : "0faf71a188bcfdf0245cab42886b9b240ca71c52",
+        "version" : "1.1.2200"
+      }
+    },
+    {
+      "identity" : "qkmrzparser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mattijah/QKMRZParser.git",
+      "state" : {
+        "revision" : "ef79fdfa691e6323e729e33c2f79bace10286f49",
+        "version" : "2.0.0"
+      }
+    },
+    {
+      "identity" : "qkmrzscanner",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mattijah/QKMRZScanner.git",
+      "state" : {
+        "branch" : "master-spm",
+        "revision" : "2600de3c3317ca8d96e81a4bbcf26547f3c92d1c"
+      }
+    },
+    {
+      "identity" : "swiftytesseract",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyTesseract/SwiftyTesseract",
+      "state" : {
+        "revision" : "1393d15d0278673dd89f2ba21d3fb748f99e02ce",
+        "version" : "4.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}

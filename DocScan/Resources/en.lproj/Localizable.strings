@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  DocScan
+
+  Created by Ivan Lele on 31.01.2024.
+  
+*/
+
+"WelcomeText" = "Fully privacy protected proof generation";
+"WelcomeHint1" = "Secure scan of the documents and QR codes";
+"WelcomeHint2" = "Generate Zero Knowledge proofs";
+"WelcomeHint3" = "Audited, open-source codebase";
+"Proceed" = "Proceed";
+"Secure" = "Secure";
+"Country" = "РУС";
+"Register" = "Register";
+"ScanMrzTitle" = "Scan the front page of your passport";
+"ScanMrzHint" = "Scan under a good lighting";
+"Scan" = "Scan";
+"ScanPassportCover" = "Scan your passport cover";
+"NFCScan" = "NFC scanning";
+"NFCHint" = "Place the middle of the passport on the back of the phone";
+"DataAnon" = "Data retrieved";
+"CreateProfile" = "Generate anonymous proof";
+"DocumentNumber" = "Document number";
+"DateOfExpiry" = "Date of expiry";
+"Birthday" = "Birthday";
+"Surname" = "Surname";
+"GivenName" = "Given name";
+"Nationality" = "Nationality";
+"Proofs" = "Proofs";
+"EmptyProofs" = "No proofs available";
+"ScanDocument" = "Scan Document";
+"DataFromNFC" = "Retrieve data from the NFC enabled documents";
