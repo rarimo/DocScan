@@ -22,7 +22,7 @@ struct WelcomeView: View {
                 Image("Logo")
                     .resizable()
                     .frame(width: 113, height: 113)
-                Text("Doc Scan")
+                Text("DL Doc Scan")
                     .font(.system(size: 25))
                     .bold()
                     .frame(height: 40)

@@ -11,7 +11,6 @@
 		CE11A4842B72C27800463F82 /* libfq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE11A47F2B72C27800463F82 /* libfq.a */; };
 		CE11A4852B72C27800463F82 /* librapidsnark.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE11A4802B72C27800463F82 /* librapidsnark.a */; };
 		CE11A4862B72C27800463F82 /* libfr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE11A4812B72C27800463F82 /* libfr.a */; };
-		CE11A4892B72C2B100463F82 /* libwitnesscalc_passportVerificationSHA256.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE11A4882B72C2B100463F82 /* libwitnesscalc_passportVerificationSHA256.a */; };
 		CE11A48B2B72C3C200463F82 /* ZKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11A48A2B72C3C200463F82 /* ZKUtils.swift */; };
 		CE11A48D2B72C9A100463F82 /* KeychainUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11A48C2B72C9A100463F82 /* KeychainUtils.swift */; };
 		CE1CC8A12B686FE400FB5E31 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = CE1CC8A02B686FE400FB5E31 /* KeychainAccess */; };
@@ -30,6 +29,7 @@
 		CE3A02DA2B6A9885004D747B /* LocalizationSwitcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A02D92B6A9885004D747B /* LocalizationSwitcherView.swift */; };
 		CE3A02DC2B6AA53C004D747B /* RegisterMrzScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A02DB2B6AA53C004D747B /* RegisterMrzScannerView.swift */; };
 		CE3A02DE2B6AA90F004D747B /* SecureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A02DD2B6AA90F004D747B /* SecureView.swift */; };
+		CE9905D42B779E3B00FBAA3B /* libwitnesscalc_passportVerificationSHA256.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9905D32B779E3B00FBAA3B /* libwitnesscalc_passportVerificationSHA256.a */; };
 		CEBEDC372B7277CA00875D7B /* HomeProofsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEDC362B7277CA00875D7B /* HomeProofsView.swift */; };
 		CEBEDC392B7277FF00875D7B /* ScanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEDC382B7277FF00875D7B /* ScanData.swift */; };
 		CEBEDC3D2B72794100875D7B /* DataRetrivedPassportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEDC3C2B72794100875D7B /* DataRetrivedPassportView.swift */; };
@@ -54,7 +54,6 @@
 		CE11A4802B72C27800463F82 /* librapidsnark.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librapidsnark.a; sourceTree = "<group>"; };
 		CE11A4812B72C27800463F82 /* libfr.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfr.a; sourceTree = "<group>"; };
 		CE11A4872B72C29F00463F82 /* witnesscalc_passportVerificationSHA256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = witnesscalc_passportVerificationSHA256.h; sourceTree = "<group>"; };
-		CE11A4882B72C2B100463F82 /* libwitnesscalc_passportVerificationSHA256.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwitnesscalc_passportVerificationSHA256.a; sourceTree = "<group>"; };
 		CE11A48A2B72C3C200463F82 /* ZKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKUtils.swift; sourceTree = "<group>"; };
 		CE11A48C2B72C9A100463F82 /* KeychainUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainUtils.swift; sourceTree = "<group>"; };
 		CE138FB42B753AE800950845 /* DocScan.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = DocScan.entitlements; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		CE3A02D92B6A9885004D747B /* LocalizationSwitcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationSwitcherView.swift; sourceTree = "<group>"; };
 		CE3A02DB2B6AA53C004D747B /* RegisterMrzScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMrzScannerView.swift; sourceTree = "<group>"; };
 		CE3A02DD2B6AA90F004D747B /* SecureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureView.swift; sourceTree = "<group>"; };
+		CE9905D32B779E3B00FBAA3B /* libwitnesscalc_passportVerificationSHA256.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwitnesscalc_passportVerificationSHA256.a; sourceTree = "<group>"; };
 		CEBEDC362B7277CA00875D7B /* HomeProofsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProofsView.swift; sourceTree = "<group>"; };
 		CEBEDC382B7277FF00875D7B /* ScanData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanData.swift; sourceTree = "<group>"; };
 		CEBEDC3C2B72794100875D7B /* DataRetrivedPassportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRetrivedPassportView.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE11A4892B72C2B100463F82 /* libwitnesscalc_passportVerificationSHA256.a in Frameworks */,
+				CE9905D42B779E3B00FBAA3B /* libwitnesscalc_passportVerificationSHA256.a in Frameworks */,
 				CE1CC8A12B686FE400FB5E31 /* KeychainAccess in Frameworks */,
 				CE11A4832B72C27800463F82 /* libgmp.a in Frameworks */,
 				CE11A4852B72C27800463F82 /* librapidsnark.a in Frameworks */,
@@ -112,7 +112,7 @@
 		CE11A4792B72C27800463F82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE11A4882B72C2B100463F82 /* libwitnesscalc_passportVerificationSHA256.a */,
+				CE9905D32B779E3B00FBAA3B /* libwitnesscalc_passportVerificationSHA256.a */,
 				CE11A47A2B72C27800463F82 /* bridge.h */,
 				CE11A47C2B72C27800463F82 /* prover.h */,
 				CE11A47E2B72C27800463F82 /* libgmp.a */,
@@ -478,14 +478,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DocScan/DocScan.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"DocScan/Preview Content\"";
 				DEVELOPMENT_TEAM = T7CLECN442;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DocScan/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Doc Scan";
+				INFOPLIST_KEY_CFBundleDisplayName = "DL Doc Scan";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NFCReaderUsageDescription = "Used to read data from ePassport";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Used to read MRZ from ePassports";
@@ -505,10 +506,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = "-lc++";
-				PRODUCT_BUNDLE_IDENTIFIER = com.distributedlab.docscan;
+				PRODUCT_BUNDLE_IDENTIFIER = DistributedLab.DLDocScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -524,14 +526,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DocScan/DocScan.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"DocScan/Preview Content\"";
 				DEVELOPMENT_TEAM = T7CLECN442;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DocScan/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Doc Scan";
+				INFOPLIST_KEY_CFBundleDisplayName = "DL Doc Scan";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NFCReaderUsageDescription = "Used to read data from ePassport";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Used to read MRZ from ePassports";
@@ -551,10 +554,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = "-lc++";
-				PRODUCT_BUNDLE_IDENTIFIER = com.distributedlab.docscan;
+				PRODUCT_BUNDLE_IDENTIFIER = DistributedLab.DLDocScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;

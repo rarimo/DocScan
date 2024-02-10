@@ -75,17 +75,18 @@ enum ScanData: Codable, Hashable {
     static func fromNfcModel(_ nfcModel: NFCPassportModel) -> Self {
         let dg1 = nfcModel.getDataGroup(.DG1)!.data
         
+        let currentYear = Calendar.current.component(.year, from: Date())-2000
         let currentMonth = Calendar.current.component(.month, from: Date())
-        let currentDay = Calendar.current.component(.month, from: Date())
+        let currentDay = Calendar.current.component(.day, from: Date())
         
         let inputs = PassportInput(
             inKey: Data(dg1).toCircuitInput(),
-            currDateYear: 24,
+            currDateYear: currentYear,
             currDateMonth: currentMonth,
             currDateDay: currentDay,
-            credValidYear: 25,
-            credValidMonth: 2,
-            credValidDay: 5,
+            credValidYear: currentYear+1,
+            credValidMonth: currentMonth,
+            credValidDay: currentDay,
             ageLowerbound: 18
         )
         

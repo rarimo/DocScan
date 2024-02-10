@@ -17,7 +17,7 @@
 "ScanMrzTitle" = "Scan the front page of your passport";
 "ScanMrzHint" = "Scan under a good lighting";
 "Scan" = "Scan";
-"ScanPassportCover" = "Scan your passport cover";
+"ScanPassportCover" = "Scan your document cover";
 "NFCScan" = "NFC scanning";
 "NFCHint" = "Place the middle of the passport on the back of the phone";
 "DataAnon" = "Data retrieved";

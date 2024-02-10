@@ -12,16 +12,16 @@ struct MrzHintView: View {
     
     var body: some View {
         VStack {
-            Spacer()
             HStack {
                 Text("ScanMrzTitle")
                     .bold()
                     .font(.system(size: 30))
                     .padding()
                     .padding(.leading)
-                    .frame(height: 200)
                 Spacer()
             }
+            .padding(.top)
+            .padding(.top)
             Image("ePassport")
                 .resizable()
                 .frame(width: 350, height: 220)
@@ -37,7 +37,6 @@ struct MrzHintView: View {
                 }
             }
             Spacer()
-                .frame(height: 200)
             Button(action: {
                 welcomeController.nextStage()
             }) {
@@ -50,9 +49,6 @@ struct MrzHintView: View {
             }
             .buttonStyle(.plain)
             .foregroundStyle(.white)
-            .padding(.bottom)
-            .padding(.bottom)
-            Spacer()
         }
     }
 }

@@ -44,12 +44,42 @@ class NFCScannerController: ObservableObject {
     private func _read(_ mrzKey: String) async throws {
         let newNfcModel = try await PassportReader().readPassport(mrzKey: mrzKey, tags: [.DG1, .DG2, .SOD]);
         
+        try validateNfcModel(nfcModel: newNfcModel)
+        
         nfcModel = newNfcModel
         
-        KeychainUtils.saveNfcModelData(nfcModel!.getDataGroupsRead())
+        KeychainUtils.saveNfcModelData(newNfcModel.getDataGroupsRead())
         
         DispatchQueue.main.async {
             self.onScanned()
+        }
+    }
+    
+    private func validateNfcModel(nfcModel: NFCPassportModel) throws {
+        let expiryDate = nfcModel.documentExpiryDate
+        
+        let expiryDateStartYearIndex = expiryDate.startIndex
+        let expiryDateEndYearIndex = expiryDate.index(expiryDateStartYearIndex, offsetBy: 1)
+        
+        let expiryDateStartMonthIndex = expiryDate.index(expiryDateEndYearIndex, offsetBy: 1)
+        let expiryDateEndMonthIndex = expiryDate.index(expiryDateStartMonthIndex, offsetBy: 1)
+        
+        let expiryDateStartDayIndex = expiryDate.index(expiryDateEndMonthIndex, offsetBy: 1)
+        let expiryDateEndDayIndex = expiryDate.index(expiryDateStartDayIndex, offsetBy: 1)
+        
+        let expiryYearStr = String(nfcModel.documentExpiryDate[expiryDateStartYearIndex...expiryDateEndYearIndex])
+        let expiryMonthStr = String(nfcModel.documentExpiryDate[expiryDateStartMonthIndex...expiryDateEndMonthIndex])
+        let expiryDayStr = String(nfcModel.documentExpiryDate[expiryDateStartDayIndex...expiryDateEndDayIndex])
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale.current
+        
+        
+        let expiryDateT = dateFormatter.date(from: "20\(expiryYearStr)-\(expiryMonthStr)-\(expiryDayStr)")!
+        if Date().timeIntervalSince1970 > expiryDateT.timeIntervalSince1970 {
+            throw "Passport is expired"
         }
     }
     
