@@ -12,13 +12,14 @@ import QKMRZScanner
 enum ScanData: Codable, Hashable {
     static let storageKey = "scan_data.batch"
     
-    case ePassport(proof: String, publicInputs: String)
+    case ePassport(docNumber: String, proof: String, publicInputs: String)
     case qr(String)
     case empty
     
     var isEPassport: Bool {
         switch self {
         case .ePassport(
+            docNumber: _,
             proof: _,
             publicInputs: _
         ):
@@ -33,6 +34,7 @@ enum ScanData: Codable, Hashable {
     var isQR: Bool {
         switch self {
         case .ePassport(
+            docNumber: _,
             proof: _,
             publicInputs: _
         ):
@@ -47,6 +49,7 @@ enum ScanData: Codable, Hashable {
     var isEmpty: Bool {
         switch self {
         case .ePassport(
+            docNumber: _,
             proof: _,
             publicInputs: _
         ):
@@ -61,6 +64,7 @@ enum ScanData: Codable, Hashable {
     var title: String {
         switch self {
         case .ePassport(
+            docNumber: _,
             proof: _,
             publicInputs: _
         ):
@@ -97,6 +101,7 @@ enum ScanData: Codable, Hashable {
         let (proof, publicInputs) = try! ZKUtils.groth16PassportVerificationSHA256Prover(wtns: witness)
         
         return .ePassport(
+            docNumber: nfcModel.documentNumber,
             proof: String(data: proof, encoding: .utf8)!,
             publicInputs: String(data: publicInputs, encoding: .utf8)!
         )
@@ -108,6 +113,7 @@ enum ScanData: Codable, Hashable {
         }
         
         guard let data = try? JSONDecoder().decode([Self].self, from: rawData) else {
+            eraceDataBatch()
             return []
         }
         
@@ -126,7 +132,7 @@ enum ScanData: Codable, Hashable {
     
     static let sampleData: [Self] = [
         Self.ePassport(
-           proof: "proof", publicInputs: "publicInputs"
+            docNumber: "1234567", proof: "proof", publicInputs: "publicInputs"
         ),
         Self.qr("https://example.com/")
     ]

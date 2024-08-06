@@ -22,6 +22,7 @@ class MRZScannerController: ObservableObject, QKMRZScannerViewDelegate {
         
         
         let mrzDateFormatter = DateFormatter()
+        mrzDateFormatter.timeZone = .gmt
         mrzDateFormatter.dateFormat = "YYMMdd"
         
         mrzKey = PassportUtils.getMRZKey(

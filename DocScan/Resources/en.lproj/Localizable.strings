@@ -32,3 +32,4 @@
 "EmptyProofs" = "No proofs available";
 "ScanDocument" = "Scan Document";
 "DataFromNFC" = "Retrieve data from the NFC enabled documents";
+"AlreadyScanned" = "Already scanned";

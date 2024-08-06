@@ -15,6 +15,7 @@ struct HomeView: View {
     
     @State var isQrScanActive = false
     @State var isDocScanActive = false
+    @State var isDocAlreadyScanned = false
     
     var body: some View {
         ZStack {
@@ -37,13 +38,30 @@ struct HomeView: View {
                     DataRetrivedPassportView(nfcModel: welcomeController.nfcScannerController.nfcModel!) {
                         let newScanData = ScanData.fromNfcModel(welcomeController.nfcScannerController.nfcModel!)
                         
-                        welcomeController.nfcScannerController.nfcModel = nil
+                        defer {
+                            
+                            welcomeController.nfcScannerController.nfcModel = nil
+                        }
                         
                         isDocScanActive = false
                         
                         welcomeController.currentStage = .off
                         
-                        if scanData.contains(newScanData)  {
+                        if scanData.contains(where: { scanData in
+                            switch scanData {
+                            case .ePassport(
+                                docNumber: let docNumber,
+                                proof: _,
+                                publicInputs: _
+                            ):
+                                return docNumber == welcomeController.nfcScannerController.nfcModel!.documentNumber
+                            case .qr(_):
+                                return scanData == newScanData
+                            case .empty:
+                                return true
+                            }
+                        })  {
+                            isDocAlreadyScanned = true
                             return
                         }
                         
@@ -60,6 +78,9 @@ struct HomeView: View {
                     }
                 }
             }
+        }
+        .alert("AlreadyScanned", isPresented: $isDocAlreadyScanned) {
+            Button("OK", role: .cancel) { }
         }
     }
     
